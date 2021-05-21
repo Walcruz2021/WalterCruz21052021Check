@@ -362,12 +362,12 @@ var n, i, k, aux;
     n = array.length;
     for (k = 1; k < n; k++) {
         for (i = 0; i < (n - k); i++) {
-            if (array[i].price > array[i + 1].price) {
+            if (array[i][firstOrd] > array[i + 1][firstOrd]) {
                 aux = array[i];
                 array[i] = array[i + 1];
                 array[i + 1] = aux;
-            }else if (array[i].price === array[i + 1].price) {
-                if(array[i].review > array[i + 1].review){
+            }else if (array[i][firstOrd] === array[i + 1][firstOrd]) {
+                if(array[i][secondOrd] > array[i + 1][secondOrd]){
                     aux = array[i];
                     array[i] = array[i + 1];
                     array[i + 1] = aux;
